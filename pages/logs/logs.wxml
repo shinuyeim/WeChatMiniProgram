@@ -1,4 +1,11 @@
 <!--logs.wxml-->
+
+<view>{{ msg }}</view>
+<button bindtap="clickMe">点击我</button>
+
+<button type="primary" bindtap='sendRequest'> 发送http请求 </button>
+
+
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log.date}}</text>
