@@ -17,7 +17,8 @@ Page({
     this.setData({
       inputValue: e.detail.value
     })
-  }, bindReplaceInput: function (e) {
+  },
+  bindReplaceInput: function (e) {
     var value = e.detail.value
     var pos = e.detail.cursor
     var left
@@ -75,6 +76,37 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  formSubmit(e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value.input)
+    wx.request({
+      url: getApp().globalData.server + '/customers',
+      data: {
+        name: e.detail.value.input,
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  sendRequest: function () {
+    wx.request({
+      url: getApp().globalData.server + '/customers',
+      data: {
+        name: e.detail.value,
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res)
+      }
     })
   }
 })

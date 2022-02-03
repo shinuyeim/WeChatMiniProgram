@@ -15,6 +15,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    server:'http://localhost:3000/api/v1'
+    //server:'http://localhost:3000/api/v1'
+    server:'http://192.168.31.6:3000/api/v1'
   }
 })

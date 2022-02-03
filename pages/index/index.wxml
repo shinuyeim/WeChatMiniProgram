@@ -21,23 +21,31 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 
-  <view class="page-body">
-    <view class="page-section">
-      <view class="weui-cells__title">输入姓名</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <input class="weui-input" auto-focus placeholder="输入你的姓名"/>
+  <view class="container">
+    <view class="page-body">
+      <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="page-section">
+          <view class="page-section-title">输入你的名字</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd" style="margin: 30rpx 0">
+                <input class="weui-input" name="input" placeholder="这是一个输入框" />
+              </view>
+            </view>
+          </view>
         </view>
-      </view>
+
+        <view class="btn-area">
+          <button style="margin: 30rpx 0" type="primary" formType="submit" bindtap='sendRequest'>Submit</button>
+        </view>
+      </form>
     </view>
   </view>
 
   <view class="page-body">
     <view class="btn-area" id="buttonContainer">
-      <view class="button-sp-area">
-        <button type="primary" plain="true">确认</button>
-      </view>
+      <button type="primary" bindtap='sendRequest'> 确认 </button>
     </view>
   </view>
-  
+
 </view>
