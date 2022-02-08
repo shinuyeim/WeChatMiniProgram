@@ -79,26 +79,15 @@ Page({
     })
   },
   formSubmit(e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value.input)
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
     wx.request({
-      url: getApp().globalData.server + '/customers',
+      url: getApp().globalData.server + '/register/customer',
       data: {
-        name: e.detail.value.input,
-      },
-      method: "POST",
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(res)
-      }
-    })
-  },
-  sendRequest: function () {
-    wx.request({
-      url: getApp().globalData.server + '/customers',
-      data: {
-        name: e.detail.value,
+        user_name:e.detail.value.user_name,
+        password:e.detail.value.password,
+        name: e.detail.value.name,
+        phone:e.detail.value.phone,
+        address:e.detail.value.address
       },
       method: "POST",
       header: {
