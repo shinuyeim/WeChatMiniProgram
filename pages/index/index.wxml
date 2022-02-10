@@ -17,6 +17,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" type="primary" bindtap="bindButtonTap">注册</button>
+  </view>
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

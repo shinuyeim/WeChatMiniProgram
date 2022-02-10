@@ -50,6 +50,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  bindButtonTap() {
+    wx.navigateTo({
+      url: '../register/register',
+    })
+  },
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
@@ -83,11 +88,11 @@ Page({
     wx.request({
       url: getApp().globalData.server + '/register/customer',
       data: {
-        user_name:e.detail.value.user_name,
-        password:e.detail.value.password,
+        user_name: e.detail.value.user_name,
+        password: e.detail.value.password,
         name: e.detail.value.name,
-        phone:e.detail.value.phone,
-        address:e.detail.value.address
+        phone: e.detail.value.phone,
+        address: e.detail.value.address
       },
       method: "POST",
       header: {

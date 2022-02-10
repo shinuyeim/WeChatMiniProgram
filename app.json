@@ -2,7 +2,8 @@
   "entryPagePath": "pages/index/index",
   "pages":[  
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/register/register"
   ],
   "window":{
     "backgroundTextStyle":"dark",
