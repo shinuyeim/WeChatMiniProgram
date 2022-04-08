@@ -1,17 +1,38 @@
 {
   "entryPagePath": "pages/index/index",
-  "pages":[  
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/register/register"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor":"#2ba667",  
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2ba667",
     "navigationBarTitleText": "Demo",
-    "navigationBarTextStyle":"white",
-    "enablePullDownRefresh":true,
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
     "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "element/icon/tabBar/shouye.png",
+      "selectedIconPath": "element/icon/tabBar/shouyefill.png"
+    },{
+      "pagePath": "pages/register/register",
+      "text": "注册",
+      "iconPath": "element/icon/tabBar/addpeople.png",
+      "selectedIconPath": "element/icon/tabBar/addpeople_fill.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "日志",
+      "iconPath": "element/icon/tabBar/rizi.png",
+      "selectedIconPath": "element/icon/tabBar/rizhifill.png"
+    }],
+    "color": "#ffffff",
+    "backgroundColor": "#2ba667",
+    "selectedColor": "#000000"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
