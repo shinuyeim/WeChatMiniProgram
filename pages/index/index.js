@@ -4,7 +4,16 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    banner: [{
+      picUrl: '/element/icon/index/nongzi001.jpg'
+    },
+    {
+      picUrl: '/element/icon/index/nongzi003.jpg'
+    },
+    {
+      picUrl: '/element/icon/index/nongzi002.jpg'
+    }
+  ],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -46,12 +55,12 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../logs/logs'
     })
   },
   bindButtonTap() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../register/register',
     })
   },
